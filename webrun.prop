@@ -1,0 +1,9 @@
+{
+  "modules": { 
+    "webrun": {
+      "description": "Plugin de navigateur web",
+      "version": "0.1",
+      "name": "Andy"
+    }
+  }
+}

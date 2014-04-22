@@ -1,0 +1,66 @@
+﻿<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="lazyrulewebrun" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  
+<rule id="lazyrulewebrun" scope="public">
+		<tag>out.action=new Object(); confidence="0.6" </tag>
+		<one-of>
+<!-- ************************************************ Désactivation du mode web ***************************************** -->
+		<item>
+				Sarah, quitte le mode web
+				<tag>out.action._attributes.context = "default"</tag>
+				<tag>out.action._attributes.tts = "C'est fait"</tag>
+		</item>
+
+		<!-- Gestion du navigateur -->
+		<item>nouvel onglet<tag>out.action.choice="newtab"</tag></item>
+		<item>ferme l'onglet<tag>out.action.choice="closetab"</tag><tag>out.action._attributes.tts = "onglet fermer"</tag></item>
+		<item>onglet suivant<tag>out.action.choice="nexttab"</tag></item>
+		<item>onglet praicedent<tag>out.action.choice="previoustab"</tag></item>
+		<item>onglet un<tag>out.action.choice="tab1"</tag></item>
+		<item>onglet deux<tag>out.action.choice="tab2"</tag></item>
+		<item>onglet trois<tag>out.action.choice="tab3"</tag></item>
+		<item>onglet quatre<tag>out.action.choice="tab4"</tag></item>
+		<item>onglet cinq<tag>out.action.choice="tab5"</tag></item>
+		<item>onglet six<tag>out.action.choice="tab6"</tag></item>
+		<item>onglet sept<tag>out.action.choice="tab7"</tag></item>
+		<item>onglet huit<tag>out.action.choice="tab8"</tag></item>
+		<item>onglet neuf<tag>out.action.choice="tab9"</tag></item>
+		<item>dessant<tag>out.action.choice="down"</tag></item>
+		<item>monte<tag>out.action.choice="up"</tag></item>
+		<item>remonte<tag>out.action.choice="up"</tag></item>
+		<item>retour<tag>out.action.choice="previous"</tag><tag>out.action._attributes.tts = "page praicedente"</tag></item>
+		<item>suivant<tag>out.action.choice="next"</tag><tag>out.action._attributes.tts = "page suivante"</tag></item>
+		<item>ajoute ce site au favoris<tag>out.action.choice="addfav"</tag><tag>out.action._attributes.tts = "voulez vous enregistrer le lien ?"</tag></item>
+		<item>valide<tag>out.action.choice="ok"</tag><tag>out.action._attributes.tts = "je valide"</tag></item>
+		<item>valider<tag>out.action.choice="ok"</tag><tag>out.action._attributes.tts = "je valide"</tag></item>
+		<item>actualise la page<tag>out.action.choice="refresh"</tag><tag>out.action._attributes.tts = "Actualisation en cours"</tag></item>
+		<item>zoum<tag>out.action.choice="zoom"</tag></item>
+		<item>zoum encore<tag>out.action.choice="zoom"</tag></item>
+		<item>daizoum<tag>out.action.choice="zoomout"</tag></item>
+		<item>daizoum encore<tag>out.action.choice="zoomout"</tag></item>
+		<item>restaure le zoom<tag>out.action.choice="defaultzoom"</tag></item>
+		<item>passe en plein ecran<tag>out.action.choice="fullscreen"</tag></item>
+		<item>passe en mode plein ecran<tag>out.action.choice="fullscreen"</tag></item>
+		<item>quitte le plein ecran<tag>out.action.choice="fullscreen"</tag></item>
+	
+		<!-- Site web -->
+		<item>lance gougueule<tag>out.action.choice="google"</tag><tag>out.action._attributes.tts = "Je lance gougueule"</tag></item>
+		<item>va sur facebook<tag>out.action.choice="facebook"</tag><tag>out.action._attributes.tts = "sa marche"</tag></item>
+		<item>va sur twitter<tag>out.action.choice="twitter"</tag><tag>out.action._attributes.tts = "sa marche"</tag></item>				
+		<item>Affiche la communauté<tag>out.action.choice="communaute"</tag><tag>out.action._attributes.tts = "voici les dernières nouvelles me concernant, bonne lecture"</tag></item>
+		<item>Affiche les actualité sarah<tag>out.action.choice="communaute"</tag><tag>out.action._attributes.tts = "voici les dernières nouvelles me concernant, bonne lecture"</tag></item>	
+		<item>mets les actu du monde<tag>out.action.choice="lemonde"</tag><tag>out.action._attributes.tts = "voici les dernières nouvelles du journal le monde"</tag></item>
+		<item>mets les actu locales<tag>out.action.choice="lebienpublic"</tag><tag>out.action._attributes.tts = "voici les dernières nouvelles locales"</tag></item>
+		<item>met les actu de korbaine<tag>out.action.choice="korben"</tag><tag>out.action._attributes.tts = "affichage du blogue de corbaine. Bonne lecture"</tag></item>	
+		<item>met les actu de zero un net<tag>out.action.choice="01net"</tag><tag>out.action._attributes.tts = "je t'affiche sa de suite. Bonne lecture"</tag></item>	
+		
+		<!-- Web tv -->
+		<item>met les infos en direct<tag>out.action.choice="bfm"</tag><tag>out.action._attributes.tts = "connexion avec le directe de BFM Tévé"</tag></item>
+		<item>met le direct de tf1<tag>out.action.choice="tf1"</tag><tag>out.action._attributes.tts = "connexion avec le direct de tf1"</tag></item>
+		<item>met le direct de msix<tag>out.action.choice="m6"</tag><tag>out.action._attributes.tts = "connexion avec le direct de m six"</tag></item>
+		<item>met le direct de w9<tag>out.action.choice="w9"</tag><tag>out.action._attributes.tts = "connexion avec le direct de w neuf"</tag></item>
+		<item>met le direct de d8<tag>out.action.choice="d8"</tag><tag>out.action._attributes.tts = "connexion avec le direct de d8"</tag></item>
+		<item>met le direct de rmc decouverte<tag>out.action.choice="rmc"</tag><tag>out.action._attributes.tts = "connexion avec le directe de rmc daicouverte"</tag></item>
+    </one-of>
+		<tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/webrun";</tag>
+  </rule>
+</grammar>
